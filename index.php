@@ -48,13 +48,10 @@ function reply() {
 					'packageId'=> '1',
 					'stickerId'=> '1'
 				];
-				$line = [
-					'line' => [$message]
-				];
 				// Body payload
 				$body =[
 					'replyToken' => $event['replyToken'],
-					'messages' => [$line]
+					'messages' => [$message]
 				];
 				// Curl
 				curl('reply',$body);
